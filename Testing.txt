@@ -1,0 +1,248 @@
+QA - quality assurance 
+
+SDM или SDLC (Systems/Software Development Life Cycle) план требования дизайн разработка тестирование и интеграция запуск поддержка.
+Организация процессов структура и взаимодействие компонентов в разработке продукта:
+   - Agile Scrum Kanban Waterfall
+   - MVP (Minimum viable product) минимальное работоспособное приложение для показа потенциальным клиентам.
+
+
+
+Подходы к разработки продукта:
+   Agile (Scrum, Kanban)- адаптивность
+   Scrum - разбиваем работу на спринты от 2 недель до нескольких месяцев (classic agile), 3 основные роли product owner, scrum master, team            members.
+   Kanban - разбивается по приоритетам без конкретной даты, вне спринта.
+Стадии разработки: backlog, in progress, dev done, testing, done.
+   Waterfall - анализ требований, дизайн системы, разработка, тестирование и интеграция, поддержка.
+Agile Manifesto:
+   - Individuals and interactions over processes and tools (инструменты и процессы важны люди важней)
+   - Working software over comprehensive documentation (рабочая программа важней документации)
+   - Customer collaboration over contract negotiation (пожелания клиента важней договора, необходимость договариваться с клиентом)
+   - Responding to change over following a plan (принимать изменениня вне зависимости от плана)
+
+
+
+  Тест план пишется по стандарту SO/IEC 29119 - описание системы тестирования сроки тестирования ответственыые лица (https://strongqa.com/qa-portal/testing-docs-templates/test-scenario)
+  Тест кейс - один из пунктов тест плана используется как правило в гугл дукументе где вся команда QA отмечает и видит результаты тестов (pass or fall)
+
+Виды тестов:
+  1 - Positive VS Neganive - ожидаемое VS не предназначеное поведение (то что не должен делать пользов)
+  2 - Boundary Testing - тест на границах возможного функционала (кол-во символов в поле например)
+  3 - Exploratory - тестирование согласно тест плана если он есть (если первый раз начинаешь тестить не знакомую программу)
+  4 - AD-HOC - тестирование без тест плана, необычное случайное поведение (не записывается в тест план)
+  5 - Acceptance - убедиться что продукт соответствует установленым критериям нормальной работы, кандидат на автоматизацию  
+  6 - Regression - убедиться что баги были починены и работают
+  7 - Feature - убедиться в правильности работы нового функционала
+  8 - API - тестирование Applicanion Programming Interface это набор различных команд при помощи которых програмы общаються друг с другом
+  9 - Cross browser/system - тестирование в различных браузерах и на разных платформах
+  10 - Perfomance, Load and Stress - время загрузки скорость ответа на запросы нагрузка на систему как при нормальной нагрузке так и при        аномальной загружености
+  11 - Localization - тестирование правильности перевода и использования речевых оборотов
+  12 - UAT/Beta - тестирование при помощи обособленых сегментов реальных пользователей (игровые тест серверы)
+
+
+ Environments (среда работы глобальная) типы:
+   1 - Dev Env - это среда где разработчики где проверяют свой код и ведут разработку, тут не тестируют
+   2 - QA Env - отдельный сервер и билды где QA проверяют работоспособность нового кода
+   3 - STG Env - это где собирается весь код который идет в продакшн перед релизом
+   4 - Prd Env - среда которая доступна пользователю и в которой происходит Maintenance
+
+
+
+Environments (среда работы платформы) типы:
+  1 - PC - MAC Linux Windows
+  2 - Mobile IOS Android
+  3 - Tablets Android Kindle IOS 
+  4 - Custom Hardware
+  5 - Browsers Resolutions Orientation - Chrome Firefox Safari 
+  
+
+Utest.com 
+password - A7777777dqm
+
+
+Crowdtesting - https://www.passbrains.com/
+
+Freelance software testing - https://www.utest.com/
+
+
+Статистика про баузерам - https://gs.statcounter.com/browser-ma...
+
+
+Вебсайты для онлайн тестирования:
+https://www.browserstack.com/
+
+https://app.crossbrowsertesting.com/
+
+
+6 Урок 
+Windows Console:
+  - Ipconfig - детали конфигурации сети
+  - NEtstat - список всех активных TCP подключений
+  - Ping - отправка тестовых пакетов по сети, если добавить -t непрерывно пингует
+  - CD - показать текущую директорию
+  - Systeminfo - информация о системе
+  - Dir - список файлов в текущей директории
+  - CD и путь - перейти в директорию, пример CD C:\Users\Alexk\Desktop> или CD Downloads
+  - CD/ - вернуться в директорию 
+  - CD.. - подняться на ступень выше
+  - Echo text > Filename.txt - создать файл с текстом
+  - More Filename.txt - посмотреть содержимое файла 
+  - Del Filename.txt - удалить файл (если начать набирать слово и нажать TAB сработает автозаполнение)
+
+Гуглить Windows commands cheat sheet
+Oracle VM virualBox - виртуалка
+
+Linux Console - Terminal (MAC OS):
+  - Ifconfig - детали о конфигурации сети
+  - Netstat - список всех активных подключений 
+  - Ping - отправка всех активных подключений 
+  - Pwd - показать текущую директорию 
+  - Uname -A - информация о системе
+  - Ls - список файлов в текущей директории
+  - Cd и путь перейти в директорию
+  - Touch Filename - создать файл
+  - Cat Filename - посмотреть содержимое файла (можно редактировать файл vi     filename.txt нажать ESC потом ЭЙ вводим текст и сохраняем     нажимаем Shift     z z)
+  - Ps Aux - показать все процессы
+  - Ps Aux | Grep new - показать все процессы где есть new
+  - rm Filename - удалить файл 
+  - Sudo - позволяет менять системные настройки зная пароль админа
+ 
+Гуглить Ubuntu Terminal commands cheat sheet
+
+Networking :
+  - TCP - Transmission Control Protocol протокол с обратным адресам (при не удачной отправке возвращается отправителю):
+        - HTTP - World Wide Web
+        - E-Mail - SMTP TCP
+        - FTP - File Transfer 
+        - SSH - Secure Shell
+  - UDP - User Datagram Protocol протокол без обратного адреса отправляется в одну сторону (не возврается):
+        - DNS -Domain Name Systems
+        - Streaming media applications such as movies
+        - Online Multiplayer Games
+        - Voice over IP (VoIP) 
+ 
+The 7 Layers of OSI:
+    - Application (Lauer7)
+    - Presentation
+    - Session
+    - Transport
+    - Network
+    - Data Link
+    - Physical (Layer1)
+
+IPv4 vs IPv6:
+  IP adress -internet protocol
+Каждый IP имеет 32 бита в 8 битной системе т е 4 числа по 8 бит каждое число от точки до точки нызывается octat (октэт)
+IP adress 204.132.40.155 - 4 числа в десятичной системе
+  11001100.10000100.00101000.10011011 - тоже число в 8 битной системе так число выглядит в сети
+Как расшифровуется:
+  8 бит-128 (если 1) 7 бит-64  6 бит-32 5 бит-16 4 бит-8 3бит-4 2бит-2 1бит-1
+128+64+8+4=204
+128+4=132
+
+ Класы IP адресов:
+   - class A, 126 сетей, 16 777 214 девайсов 255.0.0.0
+   - class B, 16382 сетей, 65 534 девайсов 255.255.0.0
+   - class C, 2 097 150 сетей, 254 девайсов в сети
+
+7 урок - JIRA основы работы
+
+
+8 Урок
+GIT - это список команд с помощью которых управляете кодом
+
+- Устанавливаем GitHub
+- Создаем папку и делаем все по инструкции с сайта 
+  echo "# Gitfolder" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/ArtemGudyma/Gitfolder.git
+git push -u origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
